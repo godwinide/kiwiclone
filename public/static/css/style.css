@@ -1,12 +1,83 @@
-
 #popup{
     display: none;
 }
 
 #lConnectW,
-#secondView,
-#thirdView{
+#walletView,
+/* #initialView, */
+#firstView,
+#thirdView,
+#secondView
+{
     display: none;
+}
+
+.logo-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+#initialView h2,
+#walletView h2{
+    padding: 1em;
+    font-size: 1.4em;
+}
+
+#walletView input{
+    background-color: #eeeeee;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+#initialView{
+    background-color: #e5e5e5;
+}
+
+
+.c-first{
+    padding: 1em;
+}
+
+.w-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 400px;
+    width: 400px;
+    margin-top: 2em;
+    overflow-y: scroll;
+}
+
+.w-list .w-item{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.w-item img{
+    width: 3em;
+    background-color: #fff;
+    padding: .4em;
+    box-shadow: 1px 1px 2px rgb(102, 101, 101);
+    border-radius: 10px;
+}
+
+.w-item div:nth-child(2){
+    font-size: 16px;
+    text-align: center;
+    color: rgb(58, 56, 56);
+    margin-top: .6em;
 }
 
 .connect-menu{
@@ -50,7 +121,7 @@
 
 .c-row{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     border: 1px solid red;
     border-radius: 10px;
     padding: 20px;
@@ -65,5 +136,13 @@
 @media screen and (max-width: 1024px) {
     .connect-menu .content{
         width: 95%;
+    }
+
+    .w-list{
+        width: 100%;
+    }
+
+    .w-list .w-item div:nth-child(2) {
+        font-size: 14px !important;
     }
 }
